@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishingTreeService.UI", "WishingTreeService\WishingTreeService.UI.csproj", "{6758BDA5-D328-4273-AE44-444B97D28160}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxFrame", "AjaxFrame\AjaxFrame.csproj", "{750ED93B-4BA4-4386-81BA-3DE8936B9198}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishingTree.Model", "WishingTree.Model\WishingTree.Model.csproj", "{3AB3D733-838D-4649-86D6-9DFFD35E69D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6758BDA5-D328-4273-AE44-444B97D28160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6758BDA5-D328-4273-AE44-444B97D28160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6758BDA5-D328-4273-AE44-444B97D28160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6758BDA5-D328-4273-AE44-444B97D28160}.Release|Any CPU.Build.0 = Release|Any CPU
+		{750ED93B-4BA4-4386-81BA-3DE8936B9198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{750ED93B-4BA4-4386-81BA-3DE8936B9198}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{750ED93B-4BA4-4386-81BA-3DE8936B9198}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{750ED93B-4BA4-4386-81BA-3DE8936B9198}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AB3D733-838D-4649-86D6-9DFFD35E69D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AB3D733-838D-4649-86D6-9DFFD35E69D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AB3D733-838D-4649-86D6-9DFFD35E69D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AB3D733-838D-4649-86D6-9DFFD35E69D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
