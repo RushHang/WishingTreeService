@@ -4,12 +4,17 @@ using System.Linq;
 using System.Text;
 using DataLibraries;
 using System.Reflection;
+using System.Web;
 
 namespace WishingTree.Model
 {
     public class Factory
     {
         private static DataAccess da;
+
+        //static HttpServerUtility server = new HttpServerUtility();
+
+        public static string ConnString { get; set; }
 
         public static DataAccess Da
         {
@@ -21,7 +26,7 @@ namespace WishingTree.Model
                     //da.DataType = DBTypes.MsSql;
                     //da.Connstring = @"data source=HANGJIAN\DB2008;user id=sa;password=hj1992;database=MyTest;";
                     da.DataType = DBTypes.SqlLite;
-                    da.Connstring = @"Data Source=WishingTree;Version=3;Pooling=true;Max Pool Size=200;FailIfMessing=false";
+                    da.Connstring = @"Data Source=" + ConnString + @";Version=3;Pooling=true;Max Pool Size=200;FailIfMessing=false";
                     da.AddModels(Assembly.GetExecutingAssembly().GetTypes());
                     da.ConnCount = 20;
                 }

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
 using AjaxFrame;
+using WishingTree.Model;
 
 namespace WishingTreeService
 {
@@ -14,6 +15,7 @@ namespace WishingTreeService
         protected void Application_Start(object sender, EventArgs e)
         {
             AjaxInitialise.Initialise();
+            Factory.ConnString = Server.MapPath("~/App_Data/WishingTree");
         }
 
         protected void Session_Start(object sender, EventArgs e)
