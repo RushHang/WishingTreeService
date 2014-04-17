@@ -4,7 +4,7 @@ using System.Text;
 using System.IO;
 using System;
 using System.Runtime.Serialization.Json;
-using System.Runtime.Serialization;
+
 
 namespace AjaxFrame
 {
@@ -51,8 +51,8 @@ namespace AjaxFrame
             }
             if (ajaxMould.IsJson)
             {
-                //result = JsonSerializer(result);
-                //context.Response.ContentType = "application/json; charset=utf-8";
+                result = JsonSerializer(result);
+                context.Response.ContentType = "application/json; charset=utf-8";
             }
             context.Response.Write(result);
         }
@@ -69,15 +69,15 @@ namespace AjaxFrame
             return HttpContext.Current.Request[ajaxMould.Parameters[nmb].ToString()];
         }
 
-        //public static string JsonSerializer(object t)
-        //{
-        //    DataContractJsonSerializer ser = new DataContractJsonSerializer(t.GetType());
-        //    MemoryStream ms = new MemoryStream();
-        //    ser.WriteObject(ms, t);
-        //    string jsonString = Encoding.UTF8.GetString(ms.ToArray());
-        //    ms.Close();
-        //    return jsonString;
-        //}
+        public static string JsonSerializer(object t)
+        {
+            DataContractJsonSerializer ser = new DataContractJsonSerializer(t.GetType());
+            MemoryStream ms = new MemoryStream();
+            ser.WriteObject(ms, t);
+            string jsonString = Encoding.UTF8.GetString(ms.ToArray());
+            ms.Close();
+            return jsonString;
+        }
     }
 
     public class AjaxMould

@@ -15,7 +15,7 @@ namespace WishingTree.Model
         [SqlColumn("Content", true)]
         public string Content { get; set; }
 
-        [SqlColumn("IsText", true)]
-        public bool IsText { get; set; }
+        [SqlColumn("IsTree", true)]
+        public bool IsTree { get; set; }
     }
 }

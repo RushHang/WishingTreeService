@@ -39,8 +39,16 @@ namespace AjaxFrame
             #endregion
 
             AjaxService aservice = new AjaxService();
-            mould = new AjaxMould() { ClassName = "AjaxService", MethodName = "GoTree", IsJson = true, Parameters = new object[] { "msg" } };
-            mould.Delegate1 += new AjaxDelegate<object, object>(aservice.GoTree);
+            mould = new AjaxMould() { ClassName = "AjaxService", MethodName = "GoTree", IsJson = true, Parameters = new object[] { "msg", "istree" } };
+            mould.Delegate2 += new AjaxDelegate<object, object,object>(aservice.GoTree);
+            _list.Add(mould);
+            mould = new AjaxMould() { ClassName = "AjaxService", MethodName = "GetAll", IsJson = true};
+            mould.Delegate0 += new AjaxDelegate<object>(aservice.GetAll);
+
+            _list.Add(mould);
+
+            mould = new AjaxMould() { ClassName = "AjaxService", MethodName = "GetNewData", IsJson = true };
+            mould.Delegate0 += new AjaxDelegate<object>(aservice.GetNewData);
 
             _list.Add(mould);
         }
